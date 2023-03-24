@@ -5,7 +5,12 @@ from main import geo_logs, users, info_queries
 class TestHomeWorks(TestCase):
     def test_visit_rus(self):
         data= [
-            {'visit1': ['Москва', 'Россия']}
+            {'visit1': ['Москва', 'Россия']},
+            {'visit3': ['Владимир', 'Россия']},
+            {'visit7': ['Тула', 'Россия']},
+            {'visit8': ['Тула', 'Россия']},
+            {'visit9': ['Курск', 'Россия']},
+            {'visit10': ['Архангельск', 'Россия']}
         ]
         geo_log = geo_logs(data)[0][f'visit{0 + 1}'][1]
         expected_geo = 'Россия'
